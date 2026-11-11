@@ -40,19 +40,19 @@
             <form id="expense-form" novalidate>
               <div class="mb-3">
                 <label for="title" class="form-label">Title</label>
-                <input type="text" class="form-control" id="title" name="title" placeholder="Coffee with friends" required>
-                <div class="invalid-feedback error" data-for="title"></div>
+                <input type="text" class="form-control" id="title" aria-describedby="title-error" name="title" placeholder="Coffee with friends" required>
+                <div class="invalid-feedback error" id="title-error" data-for="title"></div>
               </div>
 
               <div class="mb-3">
                 <label for="amount" class="form-label">Amount (Lek)</label>
-                <input type="number" class="form-control" id="amount" name="amount" min="1" step="1" placeholder="350" required>
-                <div class="invalid-feedback error" data-for="amount"></div>
+                <input type="number" class="form-control" id="amount" aria-describedby="amount-error" name="amount" min="1" step="1" placeholder="350" required>
+                <div class="invalid-feedback error" id="amount-error" data-for="amount"></div>
               </div>
 
               <div class="mb-3">
                 <label for="category" class="form-label">Category</label>
-                <select class="form-select" id="category" name="category" required>
+                <select class="form-select" id="category" aria-describedby="category-error" name="category" required>
                   <option value="">Choose a category</option>
                   <option value="Food">Food</option>
                   <option value="Transport">Transport</option>
@@ -61,13 +61,13 @@
                   <option value="Fun">Fun</option>
                   <option value="Other">Other</option>
                 </select>
-                <div class="invalid-feedback error" data-for="category"></div>
+                <div class="invalid-feedback error" id="category-error" data-for="category"></div>
               </div>
 
               <div class="mb-4">
                 <label for="date" class="form-label">Date</label>
-                <input type="date" class="form-control" id="date" name="date" required>
-                <div class="invalid-feedback error" data-for="date"></div>
+                <input type="date" class="form-control" id="date" aria-describedby="date-error" name="date" required>
+                <div class="invalid-feedback error" id="date-error" data-for="date"></div>
               </div>
 
               <button type="submit" id="addExpenseBtn" class="btn btn-primary">Add expense</button>
@@ -88,9 +88,9 @@
     </div>
   </main>
 
-  <div class="toast-message" id="toast"></div>
+  <div class="toast-message" id="toast" role="status"></div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-  <script src="scripts/add.js"></script>
+  <script src="scripts/expenses.js"></script>
 </body>
 </html>
